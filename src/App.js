@@ -5,35 +5,14 @@ import OfflineBoltIcon from "@material-ui/icons/OfflineBolt";
 import VariableReadOut from "./VariableReadOut";
 import WaveformReadOut from "./WaveformReadOut";
 import MatrixArrayReadOut from "./MatrixArrayReadOut";
+import ControlPanel from "./ControlPanel";
 
 // good luck! <3
 // https://reactjs.org/docs/hello-world.html
 export default function App() {
   return (
     <div className="App">
-      <VariableReadOut
-        label={"Frequency"}
-        step={10}
-        initial={50}
-        min={0}
-        max={100}
-        icon={<WavesIcon />}
-      />
-      <VariableReadOut
-        label={"Amplitude"}
-        step={10}
-        initial={50}
-        min={0}
-        max={100}
-        icon={<OfflineBoltIcon />}
-      />
-      <WaveformReadOut
-        label={"Waveform Generator"}
-        initial={[40, 50, 60]}
-        step={10}
-        min={0}
-        max={100}
-      />
+      <ControlPanel />
       <MatrixArrayReadOut rowNumb={4} columnNumb={4} />
     </div>
   );
